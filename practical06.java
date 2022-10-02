@@ -3,7 +3,7 @@
 import java.io.*;
 import java.util.*;
 
-class practical6 {
+class practical06 {
     public static void main(String[] args) {
         int[] numbers = { 12, 32, 11, 24, 33, 31, 01, 99, 15, 67 };
         ArrayList[] buckets = new ArrayList[10];

@@ -1,6 +1,6 @@
 // Linear Time Sort :Counting Sort
 
-public class practical7 {
+public class practical07 {
     static void countSort(int[] arr, int n, int k) {
         int[] count = new int[k + 1];
 

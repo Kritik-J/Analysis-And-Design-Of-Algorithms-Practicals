@@ -1,6 +1,6 @@
 // Fractional Knapsack Problem using greedy technique 
 
-public class practical4 {
+public class practical04 {
     public static void knapsack(double capacity, double[] weight, double[] profit) {
 
         int n = weight.length;
