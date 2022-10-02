@@ -11,8 +11,9 @@ class practical1 {
     }
 
     public static void bubbleSort(int arr[], int n) {
-        int flag = 1;
         for (int i = 0; i < n - 1; i++) {
+            int flag = 1;
+
             for (int j = 0; j < n - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
                     flag = 0;
@@ -21,6 +22,7 @@ class practical1 {
                     arr[j + 1] = temp;
                 }
             }
+
             if (flag == 1) {
                 break;
             }
@@ -31,22 +33,20 @@ class practical1 {
         int low = 0;
         int high = n - 1;
 
-        while (true) {
-            if (low <= high) {
-                int mid = (low + high) / 2;
-                if (arr[mid] == key) {
-                    System.out.println("\nNumber " + key + " is found at index " + mid);
-                    break;
-                } else if (arr[mid] < key) {
-                    low = mid + 1;
-                } else {
-                    high = mid - 1;
-                }
+        while (low <= high) {
+            int mid = (low + high) / 2;
+
+            if (arr[mid] == key) {
+                System.out.println("Element found at index " + mid);
+                return;
+            } else if (arr[mid] < key) {
+                low = mid + 1;
             } else {
-                System.out.println("\nNumber " + key + " is not found in the array");
-                break;
+                high = mid - 1;
             }
         }
+
+        System.out.println("Element not found");
     }
 
     public static void main(String[] args) {
