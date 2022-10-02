@@ -1,6 +1,6 @@
 // Sort the given array using Insertion sort
 
-class practical3 {
+class practical03 {
     public static void printArray(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");

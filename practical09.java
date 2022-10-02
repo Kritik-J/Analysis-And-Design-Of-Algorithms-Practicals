@@ -1,6 +1,6 @@
 // Making Change Problem using Dynamic programming technique 
 
-public class practical9 {
+public class practical09 {
     public static int min(int a, int b) {
         if (a < b) {
             return a;
