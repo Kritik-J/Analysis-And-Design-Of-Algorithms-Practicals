@@ -37,6 +37,10 @@ public class practical10 {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < W; j++) {
                 System.out.print(V[i][j] + "  ");
+
+                if(i== n-1 && j == W-1){
+                    System.out.println("\n\nMaximum value: " + V[n-1][W-1]);
+                }
             }
             System.out.println();
         }

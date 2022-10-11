@@ -5,9 +5,9 @@ import java.util.*;
 
 class practical06 {
     public static void main(String[] args) {
-        int[] numbers = { 12, 32, 11, 24, 33, 31, 01, 99, 15, 67 };
+        int[] numbers = { 12, 32, 11, 24, 33, 31, 1, 99, 15, 67 };
         ArrayList[] buckets = new ArrayList[10];
-        ArrayList<Integer> result = new ArrayList<Integer>();
+        ArrayList<Integer> result = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
             buckets[i] = new ArrayList<Integer>();

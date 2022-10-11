@@ -1,49 +1,29 @@
-// Linear Time Sort :Counting Sort
+import java.util.Arrays;
 
-public class practical07 {
-    static void countSort(int[] arr, int n, int k) {
-        int[] count = new int[k + 1];
-
-        int[] output = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            count[arr[i]]++;
-        }
-
-        for (int i = 1; i <= k; i++) {
-            count[i] += count[i - 1];
-        }
-
-        for (int i = n - 1; i >= 0; i--) {
-            output[count[arr[i]] - 1] = arr[i];
-            count[arr[i]]--;
-        }
-
-        System.out.println("Sorted Array is :");
-        for (int i = 0; i < n; i++) {
-            System.out.print(output[i] + " ");
-        }
-
-        System.out.println();
-
-        System.out.println("Count Array is :");
-        for (int i = 0; i < n; i++) {
-            System.out.print(count[i] + " ");
-        }
-    }
-
+class practical07{
     public static void main(String[] args) {
-        // array
+        int max = 9;
+        int[] count = new int[max+1];
+        int[] numbers = {3,4,2,3,2,2,0,1,7,6,8,9,1};
+        int[] result = new int[numbers.length];
 
-        int arr[] = { 1, 4, 1, 2, 7, 5, 2 };
+        System.out.println("Unsorted array: " + Arrays.toString(numbers));
 
-        // length of array
+        for(int num: numbers){
+            count[num]++;
+        }
 
-        int n = arr.length;
+        count[0]=0;
+        for(int i=1; i< count.length;i++){
+            count[i] += count[i-1];
+        }
+        System.out.println("Count array:    " + Arrays.toString(count));
 
-        // max element in the array
-        int k = 7;
+        for(int j= result.length-1; j>=0;j--){
+            result[count[numbers[j]]] = numbers[j];
+            count[numbers[j]]--;
+        }
 
-        countSort(arr, n, k);
+        System.out.println("Sorted array:   " + Arrays.toString(result));
     }
 }
