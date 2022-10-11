@@ -2,42 +2,35 @@
 
 public class practical11 {
 
-    public static int[][] floyd(int[][] L) {
+    public static double[][] floyd(double[][] L) {
         int n = L.length;
-        int[][] D = new int[n][n];
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                D[i][j] = L[i][j];
-            }
-        }
 
         for (int k = 0; k < n; k++) {
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
-                    D[i][j] = Math.min(D[i][j], D[i][k] + D[k][j]);
+                    L[i][j] = Math.min(L[i][j], L[i][k] + L[k][j]);
                 }
             }
         }
 
-        return D;
+        return L;
     }
 
     public static void main(String[] args) {
-        // infinities are represented as 10000000
+        double inf = Double.POSITIVE_INFINITY;
 
-        int L[][] = {
-                { 0, 100000, 3, 100000 },
-                { 2, 0, 100000, 100000 },
-                { 100000, 7, 0, 1 },
-                { 6, 100000, 100000, 0 }
+        double[][] L = {
+                { 0, inf, 3, inf },
+                { 2, 0, inf, inf },
+                { inf, 7, 0, 1 },
+                { 6, inf, inf, 0 }
         };
 
-        int D[][] = floyd(L);
+        double[][] D = floyd(L);
 
         for (int i = 0; i < D.length; i++) {
             for (int j = 0; j < D.length; j++) {
-                System.out.print(D[i][j] + "  ");
+                System.out.print(String.format("%02.0f",D[i][j]) + " ");
             }
             System.out.println();
         }
