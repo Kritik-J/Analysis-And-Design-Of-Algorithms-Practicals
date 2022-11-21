@@ -2,6 +2,8 @@
 
 This repository contains the solutions to the practicals of the course Analysis and Design of Algorithms (3150703) at SCET, Surat.
 
+![Rick](https://media.tenor.com/nBt6RZkFJh8AAAAi/never-gonna.gif)
+
 ## Practical List
 
 1. Sort the given array using bubble sort and apply binary search on it.
